@@ -1,0 +1,38 @@
+# depslib dependency file v1.0
+1522975260 source:c:\users\alumno\desktop\clase5\clase5\main.c
+	<stdio.h>
+	<stdlib.h>
+	"mostrarArray.h"
+	"pedirArray.h"
+	"ordenarArray.h"
+
+1522969035 c:\users\alumno\desktop\clase5\clase5\libclase5.h
+
+1522975343 source:c:\users\alumno\desktop\clase5\clase5\mostrararray.c
+	<stdio.h>
+	<stdlib.h>
+	"mostrarArray.h"
+
+1522971550 source:c:\users\alumno\desktop\clase5\clase5\get.c
+	<stdio.h>
+	<stdlib.h>
+
+1522969982 c:\users\alumno\desktop\clase5\clase5\mostrararray.h
+
+1522970427 c:\users\alumno\desktop\clase5\clase5\pedirarray.h
+
+1522973881 c:\users\alumno\desktop\clase5\clase5\get.h
+
+1522974306 source:c:\users\alumno\desktop\clase5\clase5\pedirarray.c
+	<stdio.h>
+	<stdlib.h>
+	"pedirArray.h"
+	"get.h"
+
+1522975373 source:c:\users\alumno\desktop\clase5\clase5\ordernararray.c
+	<stdio.h>
+	<stdlib.h>
+	"ordenarArray.h"
+
+1522975260 c:\users\alumno\desktop\clase5\clase5\ordenararray.h
+
