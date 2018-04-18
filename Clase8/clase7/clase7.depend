@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1523581910 source:c:\users\alumno\desktop\nueva carpeta\clase7\funcs.c
+	<stdio.h>
+	<stdlib.h>
+	"funcs.h"
+
+1523581891 c:\users\alumno\desktop\nueva carpeta\clase7\funcs.h
+
+1524008369 source:c:\users\alumno\desktop\nueva carpeta\clase7\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"funcs.h"
+
