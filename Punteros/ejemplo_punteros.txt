@@ -1,0 +1,47 @@
+typedef struct{
+    char nombre[50];
+    int edad;
+}Alumno;
+
+void cargar(Alumno* array,int cantidad){
+    int i;
+
+    for(i=0;i<cantidad;i++){
+
+        (array+i)->edad = 10 + i;
+    }
+}
+
+void mostrar(Alumno* array,int cantidad){
+
+    Alumno* limite = array + cantidad;
+    for(;array<limite;array++){
+
+        printf("%d\n",array->edad);
+    }
+}
+
+int main()
+{
+    /*Cliente arrayCliente[QTY];
+    Publicacion arrayPublicacion[QTY];,
+    int menu;
+    int auxiliarId;
+    int idCliente;º
+
+    int auxInt = 10;
+    printf("\nDir: %d",sizeof(auxInt));
+    *(arraychar+4)='@';*/ 
+    
+    int a*;
+    int *pAux;
+    a=(int*)malloc(sizeof(int)*20) // array de 20
+
+    Alumno* arrayAlumnos[50];
+    /*Alumno* = malloc(sizeof(Alumno)*50);
+    if(arrayAlumno != NULL)
+        return 0;
+    */
+    cargar(arrayAlumnos,50);
+    mostrar(arrayAlumnos,50);
+}
