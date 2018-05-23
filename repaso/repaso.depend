@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1527027673 source:c:\users\alumno\desktop\repaso\cliente.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"cliente.h"
+
+1527027694 c:\users\alumno\desktop\repaso\cliente.h
+
+1527027700 source:c:\users\alumno\desktop\repaso\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"cliente.h"
+
