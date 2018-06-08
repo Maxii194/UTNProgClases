@@ -163,20 +163,21 @@ int al_contains(ArrayList* this, void* pElement)
 
             if(this->pElements[i] == pElement){
 
-                return 1;
-            }
-            else{
+                returnAux = 1;
 
-                return 0;
+                break;
             }
+
+            returnAux = 0;
         }
+
     }
 
     return returnAux;
 }
 
 
-/** \brief  Set a element in pList at index position
+/** \brief Set a element in pList at index position
  * \param pList ArrayList* Pointer to arrayList
  * \param index int Index of the element
  * \param pElement void* Pointer to element
@@ -187,12 +188,17 @@ int al_contains(ArrayList* this, void* pElement)
 int al_set(ArrayList* this, int index,void* pElement)
 {
     int returnAux = -1;
+    if(this != NULL && pElement != NULL && index <= this->size && index >= 0){
+
+        this->pElements[index] = pElement;
+        returnAux=0;
+    }
 
     return returnAux;
 }
 
 
-/** \brief  Remove an element by index
+/** \brief Remove an element by index
  * \param pList ArrayList* Pointer to arrayList
  * \param index int Index of the element
  * \return int Return (-1) if Error [pList is NULL pointer or invalid index]
@@ -202,9 +208,19 @@ int al_remove(ArrayList* this,int index)
 {
     int returnAux = -1;
 
+    if(this != NULL && index <= this->size && index >= 0){
+
+        this->pElements[index] = NULL;
+
+        //contract(this,index);
+        this->pElements[this->size] = NULL;
+
+        returnAux=0;
+
+    }
+
     return returnAux;
 }
-
 
 
 /** \brief Removes all of the elements from this list
@@ -215,6 +231,16 @@ int al_remove(ArrayList* this,int index)
 int al_clear(ArrayList* this)
 {
     int returnAux = -1;
+    int i;
+
+    if(this != NULL){
+
+        for(i=0;i<this->size;i++){
+
+            this->pElements[i] = NULL;
+            returnAux=0;
+        }
+    }
 
     return returnAux;
 }
@@ -375,7 +401,7 @@ int expand(ArrayList* this,int index)
     return returnAux;
 }
 
-/** \brief  Contract an array list
+/** \brief Contract an array list
  * \param pList ArrayList* Pointer to arrayList
  * \param index int Index of the element
  * \return int Return (-1) if Error [pList is NULL pointer or invalid index]
@@ -384,6 +410,33 @@ int expand(ArrayList* this,int index)
 int contract(ArrayList* this,int index)
 {
     int returnAux = -1;
+    int i,j;
+
+    if(this != NULL && index >= 0 && index <= this->size){
+
+        for(i=0;i<this->size;i++){
+
+            if(this->pElements[i]==NULL){
+
+                for(j=i;j<this->size;j++){
+
+                    if(j+1 <= this->size){
+
+                        this->pElements[j] = this->pElements[j+1];
+                    }
+                    else{
+
+                        this->pElements[j] = NULL;
+                    }
+
+                }
+            }
+
+            break;
+        }
+
+         returnAux=0;
+    }
 
     return returnAux;
 }
