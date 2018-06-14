@@ -1,0 +1,41 @@
+
+int al_sort(ArrayList* this, int (*pFunc)(void* ,void*), int order)
+{
+    int returnAux = -1;
+    int i,j;
+    void* auxSwap;
+
+    if(this!=NULL && pFunc!=NULL && (order == 0 || order == 1))
+    {
+        if(order)
+        {
+            for(i=1;i<this->size;i++)
+            {
+                auxSwap = this->pElements[i];
+                j=i-1;
+                while(j>=0 && (pFunc(auxSwap,this->pElements[j]))==1)
+                {
+                 this->pElements[j+1] = this->pElements[j];
+                 j--;
+                }
+                this->pElements[j+1]=auxSwap;
+            }
+        }
+        else
+        {
+            for(i=1;i<this->size;i++)
+            {
+                auxSwap = this->pElements[i];
+                j=i-1;
+                while(j>=0 && (pFunc(auxSwap,this->pElements[j]))==-1)
+                {
+                 this->pElements[j+1] = this->pElements[j];
+                 j--;
+                }
+                this->pElements[j+1]=auxSwap;
+            }
+        }
+        returnAux = 0;
+    }
+    return returnAux;
+}
