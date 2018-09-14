@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1536886962 source:/home/alumno/Escritorio/insertion/insertion/main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
